@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração para Maria Eduarda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Maria Eduarda, eu te amo!</h1>
+        <div class="image-container">
+            <img src="C:\Users\henri\Desktop\Henrique\Minha vida\Meu site\Images\sua_imagem.jpg.jpeg" alt="Maria Eduarda">
+        </div>
+        <p>Você é o amor da minha vida!</p>
+    </div>
+    <audio id="background-music" loop>
+        <source src="C:\Users\henri\Desktop\Henrique\Minha vida\Meu site\Music\musica1.mp3" type="audio/mp3">
+    </audio>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audio = document.getElementById('background-music');
+            audio.play();
+        });
+    </script>
+</body>
+</html>
+<button id="play-button">Play</button>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById('background-music');
+        const playButton = document.getElementById('play-button');
+        
+        playButton.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Pausar';
+            } else {
+                audio.pause();
+                playButton.textContent = 'Play';
+            }
+        });
+    });
+</script>
